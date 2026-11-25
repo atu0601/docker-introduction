@@ -1,0 +1,10 @@
+services:
+  service-exo2:
+    build: .
+    container_name: service-exo2
+    ports:
+      - "127.0.0.1:8080:3000"
+    user: "1000:1000"
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
